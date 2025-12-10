@@ -1,0 +1,27 @@
+# Unity Scene Setup Diagram
+
+This diagram illustrates the components and structure of a Unity scene for robotics simulation:
+
+## Main Components:
+- **Main Camera**: Provides visualization of the robot and environment
+- **Robot GameObject**: The simulated robot with kinematic structure
+- **Lighting System**: Directional light and other light sources
+- **Environment**: Ground plane, obstacles, and other scene elements
+
+## Robotics-Specific Components:
+- **Rigidbodies**: Physics-enabled components for each robot part
+- **Articulation Bodies**: For realistic joint physics (in newer Unity versions)
+- **Colliders**: Define collision boundaries for robot parts
+- **Joints**: Define how robot parts connect and move relative to each other
+
+## Sensor Components:
+- **Cameras**: RGB and depth cameras for vision simulation
+- **Raycast Sensors**: For LiDAR simulation
+- **Inertial Measurement**: Scripts simulating IMU data
+- **Actuators**: Components for simulating motor commands
+
+## Integration Elements:
+- **ROS Bridge**: Interface for communication with ROS/ROS2
+- **Robot Controller Scripts**: Scripts for processing commands and publishing data
+- **UI Elements**: For real-time visualization of robot state
+- **Animation Controllers**: For complex robot movements

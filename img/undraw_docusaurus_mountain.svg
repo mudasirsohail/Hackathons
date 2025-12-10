@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f9fa" />
+
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e9ecef" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#grid)" />
+
+  <!-- Robotic arm with gripper -->
+  <g transform="translate(200, 150)">
+    <!-- Shoulder -->
+    <circle cx="0" cy="0" r="15" fill="#2e8555" />
+    
+    <!-- Upper arm -->
+    <rect x="-8" y="-30" width="16" height="60" rx="4" fill="#495057" transform="rotate(-25, 0, 0)" />
+    
+    <!-- Elbow joint -->
+    <circle cx="-10" cy="-30" r="8" fill="#fa812f" transform="rotate(-25, 0, 0)" />
+    
+    <!-- Forearm -->
+    <rect x="-6" y="-60" width="12" height="50" rx="3" fill="#6c757d" transform="rotate(-25, 0, 0)" />
+    
+    <!-- Wrist joint -->
+    <circle cx="-4" cy="-60" r="6" fill="#fa812f" transform="rotate(-25, 0, 0)" />
+    
+    <!-- Gripper -->
+    <g transform="rotate(15, -4, -90)">
+      <rect x="-10" y="-95" width="12" height="30" rx="4" fill="#2e8555" />
+      <rect x="-13" y="-90" width="3" height="20" rx="1.5" fill="#495057" />
+      <rect x="2" y="-90" width="3" height="20" rx="1.5" fill="#495057" />
+    </g>
+    
+    <!-- Base -->
+    <rect x="-25" y="15" width="50" height="10" rx="2" fill="#495057" />
+    <rect x="-35" y="20" width="70" height="5" rx="2" fill="#6c757d" />
+  </g>
+  
+  <!-- Circuit board pattern -->
+  <g opacity="0.1" transform="translate(20, 20)">
+    <path d="M0,0 H100 M0,10 H100 M0,20 H100 M0,30 H100 M0,40 H100 M0,50 H100 
+             M0,0 V50 M20,0 V50 M40,0 V50 M60,0 V50 M80,0 V50 M100,0 V50" 
+          stroke="#000" stroke-width="1"/>
+  </g>
+  
+  <g opacity="0.1" transform="translate(280, 200)">
+    <path d="M0,0 H100 M0,10 H100 M0,20 H100 M0,30 H100 M0,40 H100 M0,50 H100 
+             M0,0 V50 M20,0 V50 M40,0 V50 M60,0 V50 M80,0 V50 M100,0 V50" 
+          stroke="#000" stroke-width="1"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2e8555" font-weight="bold">
+    Robotic Nervous System
+  </text>
+</svg>

@@ -1,0 +1,33 @@
+# Sensor Integration Diagram
+
+This diagram illustrates how different sensors are integrated into the simulation environment:
+
+## Sensor Types:
+- **LiDAR**: 360-degree range sensor for environment mapping
+- **Depth Camera**: RGB-D sensor providing color and depth information
+- **IMU**: Inertial measurement unit providing acceleration and rotation data
+- **GPS**: Position sensor (in outdoor simulations)
+- **Force/Torque Sensors**: In robot joints for contact detection
+
+## Integration Architecture:
+- **Sensor Simulation Layer**: Simulates raw sensor data
+- **Noise Models**: Adds realistic noise and error characteristics
+- **Data Processing**: Converts raw data to standard formats (e.g., sensor_msgs)
+- **ROS Bridge**: Publishes sensor data to ROS topics
+
+## Data Flow:
+- **Raw Simulation Data**: Physics engine outputs (ray intersections, accelerations, etc.)
+- **Signal Processing**: Application of noise models, calibration parameters
+- **Message Conversion**: Transformation to standard ROS message types
+- **Topic Publication**: Broadcasting of sensor data on ROS topics
+
+## Sensor Fusion:
+- **Temporal Alignment**: Synchronizing data from multiple sensors with different rates
+- **Spatial Alignment**: Transforming data between different coordinate frames
+- **Calibration**: Account for sensor positions, orientations, and intrinsic parameters
+
+## Validation Points:
+- Real vs. simulated sensor characteristics
+- Noise model accuracy
+- Timing consistency
+- Coordinate frame alignment

@@ -1,0 +1,22 @@
+# Gazebo Architecture Diagram
+
+This diagram illustrates the key components of the Gazebo simulation environment:
+
+## Main Components:
+- **Gazebo Server**: Runs the physics simulation and handles all models and sensors
+- **Gazebo GUI**: Provides visualization and interaction with the simulation
+- **Model Database**: Repository of robot and object models
+- **World Files**: XML files defining simulation environments
+- **Plugin System**: Interfaces to external tools and frameworks (like ROS)
+
+## Integration Layers:
+- **Physics Engine**: ODE, Bullet, or DART providing realistic physics simulation
+- **Graphics Engine**: OGRE for high-quality 3D rendering
+- **Sensor Simulation**: Cameras, LiDAR, IMU, GPS, etc.
+- **Communication Interface**: Protobuf for internal communication, ROS bridges for external
+
+## Gazebo-ROS Integration:
+- **Gazebo API**: Direct C++ interface for programmatic control
+- **ROS Packages**: gazebo_ros_pkgs for ROS integration
+- **Message Types**: sensor_msgs, geometry_msgs, nav_msgs for data exchange
+- **TF Frames**: Coordinate transformation between robot parts and world

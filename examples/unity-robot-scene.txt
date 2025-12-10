@@ -1,0 +1,31 @@
+# Unity Robot Scene Configuration
+
+This file represents a conceptual Unity robot scene configuration that would typically be a binary .unity file.
+
+## Robot Components:
+- Robot Base: GameObject with Rigidbody and basic mesh
+- Robot Arm: ArticulationBody components for realistic joint physics
+- Sensors: Camera, LiDAR simulation, and IMU components
+- Controllers: Scripts for robot control and ROS communication
+
+## Physics Configuration:
+- Gravity: Enabled, with standard Earth gravity (9.81 m/s²)
+- Collision Detection: Continuous for fast-moving parts
+- Solver Iterations: 12 (balance between accuracy and performance)
+- Material: Custom PhysicMaterial with appropriate friction values
+
+## Key Scripts:
+- RobotController.cs: Main robot control script
+- SensorSimulation.cs: Handles sensor simulation and data publishing
+- ROSBridge.cs: Communication with ROS system
+
+## Environment:
+- Ground plane with standard PhysicMaterial
+- Lighting setup for realistic rendering
+- Occlusion areas for performance optimization
+
+## Performance Settings:
+- LOD (Level of Detail) for complex robot models
+- Occlusion culling for large environments
+- Dynamic batching for repeated objects
+- Appropriate shadow settings balancing quality and performance
