@@ -1,0 +1,29 @@
+# URDF Structure Diagram
+
+This diagram illustrates the components and structure of a URDF (Unified Robot Description Format) file:
+
+## Key Elements:
+- Robot Element: The root element with robot name and necessary xmlns
+- Links: Rigid, unmovable parts of the robot with:
+  - Visual: How the link appears (geometry, material, origin)
+  - Collision: Collision properties (geometry, origin)
+  - Inertial: Mass, center of mass, and inertia tensor
+- Joints: Connections between links with:
+  - Joint type (fixed, revolute, continuous, prismatic, etc.)
+  - Parent and child links
+  - Origin (position and orientation of joint)
+  - Axis of rotation or translation
+  - Joint limits (for revolute/prismatic joints)
+  - Dynamics properties
+
+## Typical Structure:
+- Single base_link that defines the root of the kinematic chain
+- Multiple connected links via joints forming kinematic chains
+- Material definitions for visual appearance
+- Common fixed joints for mounting sensors or other components
+
+## Example Applications:
+- Robot arm with multiple revolute joints
+- Mobile robot with continuous wheel joints
+- Humanoid robot with complex kinematic chains for arms and legs
+- Sensor mountings using fixed joints

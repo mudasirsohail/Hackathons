@@ -1,0 +1,20 @@
+# ROS 2 Architecture Diagram
+
+This diagram illustrates the key components and communication patterns in ROS 2:
+
+## Components:
+- Nodes: Individual executables that use ROS 2 to communicate with other nodes
+- Topics: Communication channels over which nodes exchange messages
+- Services: Request-response communication pattern between nodes
+- Actions: Goal-oriented communication with feedback and result
+- Parameters: Configuration values that nodes can store and retrieve
+- Message interfaces: Definitions of the data structures used in communication
+
+## Architecture:
+- Client Libraries (rclpy, rclcpp) that allow different languages to interface with ROS 2
+- DDS (Data Distribution Service) as the middleware providing underlying communication
+- ROS Graph showing how nodes are connected and communicate
+- Launch system for managing complex systems of nodes
+- Tools like rviz and rqt for visualization and interaction
+
+This architecture enables a distributed system where multiple processes and potentially multiple machines can coordinate to perform complex robotic tasks.
