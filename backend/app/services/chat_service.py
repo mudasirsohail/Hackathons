@@ -1,6 +1,5 @@
 from typing import List, Dict, Any
 from uuid import UUID
-import openai
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 from ..database.schemas import ChatSession, ChatMessage
@@ -10,6 +9,7 @@ from ..config.settings import settings
 from ..utils.logger import logger
 from ..utils.helpers import create_rag_prompt, extract_chat_history_for_llm
 from groq import Groq
+from app.config.settings import settings
 
 
 class ChatService:
