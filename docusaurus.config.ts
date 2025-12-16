@@ -205,7 +205,7 @@ const config = {
               `<script>
                 // Global variable for API configuration
                 window.API_CONFIG = {
-                  baseUrl: 'http://localhost:8000'
+                  baseUrl: 'https://mudasirsohail-physical-ai-backend-2edf874.hf.space'
                 };
               </script>`,
             ],

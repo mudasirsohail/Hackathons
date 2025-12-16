@@ -49,25 +49,13 @@ class DocumentIngestResponse(BaseModel):
     message: str
 
 
-# Chat Models
+# Simple Chat Models (for simplified backend)
 class ChatRequest(BaseModel):
-    query: Optional[str] = None  # Keep for backward compatibility
-    message: Optional[str] = None  # New field for frontend compatibility
-    session_id: Optional[str] = None  # String to allow any format, validate in endpoint
-    user_id: Optional[int] = None
-    mode: str = "global"  # "global" or "selected_text"
-    selected_text: Optional[str] = None  # Used when mode is "selected_text"
+    message: str  # Only message field
 
 
 class ChatResponse(BaseModel):
-    response: str
-    context: List[Dict[str, Any]]
-    session_id: str
-
-
-class ChatHistoryResponse(BaseModel):
-    session_id: str
-    messages: List[Dict[str, Any]]
+    response: str  # Only response field
 
 
 # Query Models

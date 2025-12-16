@@ -136,7 +136,7 @@ In the `ChatInterface.js` component, ensure the API endpoint matches your backen
 
 ```js
 // Update this line in ChatInterface.js with your actual backend URL
-const response = await fetch('http://localhost:8000/chat', {
+const response = await fetch('https://mudasirsohail-physical-ai-backend-2edf874.hf.space/chat', {
 ```
 
 For production, you'll likely want to make this configurable:
@@ -144,14 +144,14 @@ For production, you'll likely want to make this configurable:
 ```js
 // In docusaurus.config.js, add a custom field
 customFields: {
-  chatApiUrl: process.env.CHAT_API_URL || 'http://localhost:8000'
+  chatApiUrl: process.env.CHAT_API_URL || 'https://mudasirsohail-physical-ai-backend-2edf874.hf.space'
 }
 ```
 
 Then in your component:
 ```js
 // Read the config in your component
-const chatApiUrl = window.chatApiUrl || 'http://localhost:8000';
+const chatApiUrl = window.chatApiUrl || 'https://mudasirsohail-physical-ai-backend-2edf874.hf.space';
 ```
 
 ### 4. Enable Text Selection Feature
@@ -169,12 +169,12 @@ Add environment variables for the API endpoints:
 
 ```bash
 # In your deployment environment
-CHAT_API_URL=https://your-api-domain.com
+CHAT_API_URL=https://mudasirsohail-physical-ai-backend-2edf874.hf.space
 ```
 
 For local development, you can add to a `.env.local` file in your Docusaurus directory:
 ```
-CHAT_API_URL=http://localhost:8000
+CHAT_API_URL=https://mudasirsohail-physical-ai-backend-2edf874.hf.space
 ```
 
 ### 6. Styling and Customization

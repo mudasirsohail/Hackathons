@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect, useRef } from 'react';
+import apiConfig from './apiConfig'; // Import the centralized API config
 import './ChatInterface.css'; // Assuming you have custom styles
 
 const ChatInterface = ({ docsDir }) => {
@@ -60,16 +61,13 @@ const ChatInterface = ({ docsDir }) => {
     setIsLoading(true);
 
     try {
-      // Prepare the request body
+      // Prepare the request body - only send message as requested
       const requestBody = {
-        query: inputValue,
-        mode: mode,
-        ...(sessionId && { session_id: sessionId }),
-        ...(mode === 'selected_text' && { selected_text: selectedText })
+        message: inputValue
       };
 
       // Make the API call to the backend
-      const response = await fetch('http://localhost:8000/chat', {
+      const response = await fetch(apiConfig.baseUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useColorMode } from '@docusaurus/theme-common';
 import { v4 as uuidv4 } from 'uuid';
+import apiConfig from './apiConfig'; // Import the centralized API config
 import './ChatWidget.css';
 
 const ChatWidget = () => {
@@ -58,11 +59,6 @@ const ChatWidget = () => {
     setIsLoading(true);
 
     try {
-      // Use the API configuration defined in docusaurus.config.js
-      const apiUrl = typeof window !== 'undefined' && window.API_CONFIG
-        ? `${window.API_CONFIG.baseUrl}/chat`
-        : 'http://localhost:8000/chat'; // Default fallback
-
       const requestBody = {
         message: userMessage.content,
         selected_text: selectedText || null,  // Include selected text if available
@@ -71,7 +67,7 @@ const ChatWidget = () => {
         user_id: null  // No user auth required
       };
 
-      const response = await fetch(apiUrl, {
+      const response = await fetch(apiConfig.baseUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

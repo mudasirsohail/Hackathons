@@ -254,6 +254,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useColorMode } from "@docusaurus/theme-common";
 import { v4 as uuidv4 } from 'uuid';
+import apiConfig from './apiConfig'; // Import the centralized API config
 import "./ChatWidget.css";
 
 const ChatWidget = () => {
@@ -298,7 +299,7 @@ const ChatWidget = () => {
         session_id: sessionId  // Include session ID in the request
       };
 
-      const response = await fetch("http://localhost:8000/chat", {
+      const response = await fetch(apiConfig.baseUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

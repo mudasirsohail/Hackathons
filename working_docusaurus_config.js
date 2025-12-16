@@ -66,7 +66,7 @@ const config = {
               `<script>
                 // Global variable for API configuration
                 window.API_CONFIG = {
-                  baseUrl: typeof window !== 'undefined' ? window.location.origin : 'http://localhost:8000'
+                  baseUrl: typeof window !== 'undefined' ? window.location.origin : 'https://mudasirsohail-physical-ai-backend-2edf874.hf.space'
                 };
                 
                 // For development, use the same origin since we'll proxy
